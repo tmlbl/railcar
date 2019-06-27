@@ -39,7 +39,7 @@ pub fn setgroups(gids: &[libc::gid_t]) -> Result<()> {
 
 #[inline]
 pub fn setrlimit(
-    resource: libc::c_int,
+    resource: libc::c_uint,
     soft: libc::c_ulonglong,
     hard: libc::c_ulonglong,
 ) -> Result<()> {

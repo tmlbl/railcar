@@ -1343,7 +1343,7 @@ fn fork_first(
 
             // set rlimits (before entering user ns)
             for rlimit in rlimits.iter() {
-                setrlimit(rlimit.typ as i32, rlimit.soft, rlimit.hard)?;
+                setrlimit(rlimit.typ as u32, rlimit.soft, rlimit.hard)?;
             }
 
             if userns {
